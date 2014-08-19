@@ -1,0 +1,620 @@
+# depslib dependency file v1.0
+1407528135 source:w:\nucleo\j1\src\main.c
+	"hw_config.h"
+	"usb_lib.h"
+	"usb_desc.h"
+	"usb_pwr.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_rcc.h
+	"stm32l1xx.h"
+
+1407837030 w:\nucleo\j1\inc\stm32l1xx.h
+	"core_cm3.h"
+	"system_stm32l1xx.h"
+	<stdint.h>
+	"stm32l1xx_conf.h"
+
+1407500913 w:\nucleo\j1\inc\cmsis\core_cm3.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+
+1407500913 w:\nucleo\j1\inc\cmsis\core_cminstr.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1407500913 w:\nucleo\j1\inc\cmsis\core_cmfunc.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1407845333 w:\nucleo\j1\inc\system_stm32l1xx.h
+
+1407528135 w:\nucleo\j1\inc\stm32l1xx_conf.h
+	"stm32l1xx_adc.h"
+	"stm32l1xx_crc.h"
+	"stm32l1xx_comp.h"
+	"stm32l1xx_dac.h"
+	"stm32l1xx_dbgmcu.h"
+	"stm32l1xx_dma.h"
+	"stm32l1xx_exti.h"
+	"stm32l1xx_flash.h"
+	"stm32l1xx_gpio.h"
+	"stm32l1xx_syscfg.h"
+	"stm32l1xx_i2c.h"
+	"stm32l1xx_iwdg.h"
+	"stm32l1xx_lcd.h"
+	"stm32l1xx_pwr.h"
+	"stm32l1xx_rcc.h"
+	"stm32l1xx_rtc.h"
+	"stm32l1xx_spi.h"
+	"stm32l1xx_tim.h"
+	"stm32l1xx_usart.h"
+	"stm32l1xx_wwdg.h"
+	"misc.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_adc.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_crc.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_comp.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_dac.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_dbgmcu.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_dma.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_exti.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_flash.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_gpio.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_syscfg.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_i2c.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_iwdg.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_lcd.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_pwr.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_rtc.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_spi.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_tim.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_usart.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\stm32l1xx_wwdg.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j1\inc\stm_lib\misc.h
+	"stm32l1xx.h"
+
+1407588405 source:w:\nucleo\j1\src\startup_stm32l1xx_hd.s
+
+1407590268 source:w:\nucleo\j1\src\stm_lib\stm32l1xx_gpio.c
+	<stm32l1xx_gpio.h>
+	<stm32l1xx_rcc.h>
+
+1407500913 source:w:\nucleo\j1\src\stm_lib\stm32l1xx_rcc.c
+	"stm32l1xx_rcc.h"
+
+1407841590 source:w:\nucleo\j1\src\system_stm32l1xx.c
+	"stm32l1xx.h"
+
+1407869201 source:w:\nucleo\j1\src\hw_config.c
+	"stm32_it.h"
+	"usb_lib.h"
+	"usb_prop.h"
+	"usb_desc.h"
+	"hw_config.h"
+	"usb_pwr.h"
+
+1407528135 w:\nucleo\j1\inc\stm32_it.h
+	"platform_config.h"
+
+1407869190 w:\nucleo\j1\inc\platform_config.h
+	"stm32l1xx.h"
+	"stm32l152_eval.h"
+	"stm32l152d_eval.h"
+	"stm32f10x.h"
+	"stm3210b_eval.h"
+	"stm3210e_eval.h"
+	"stm32f37x.h"
+	"stm32373c_eval.h"
+	"stm32f30x.h"
+	"stm32303c_eval.h"
+
+1407528129 w:\nucleo\j1\inc\usb\usb_lib.h
+	"hw_config.h"
+	"usb_type.h"
+	"usb_regs.h"
+	"usb_def.h"
+	"usb_core.h"
+	"usb_init.h"
+	"usb_sil.h"
+	"usb_mem.h"
+	"usb_int.h"
+
+1407528135 w:\nucleo\j1\inc\hw_config.h
+	"platform_config.h"
+	"usb_type.h"
+
+1407528129 w:\nucleo\j1\inc\usb\usb_type.h
+	"usb_conf.h"
+
+1407528135 w:\nucleo\j1\inc\usb\usb_conf.h
+
+1407528129 w:\nucleo\j1\inc\usb\usb_regs.h
+
+1407528129 w:\nucleo\j1\inc\usb\usb_def.h
+
+1407528129 w:\nucleo\j1\inc\usb\usb_core.h
+
+1407528129 w:\nucleo\j1\inc\usb\usb_init.h
+
+1407528129 w:\nucleo\j1\inc\usb\usb_sil.h
+
+1407528129 w:\nucleo\j1\inc\usb\usb_mem.h
+
+1407528129 w:\nucleo\j1\inc\usb\usb_int.h
+
+1407528135 w:\nucleo\j1\inc\usb\usb_prop.h
+
+1407528135 w:\nucleo\j1\inc\usb\usb_desc.h
+
+1407528135 w:\nucleo\j1\inc\usb\usb_pwr.h
+
+1407528135 source:w:\nucleo\j1\src\stm32_it.c
+	"hw_config.h"
+	"stm32_it.h"
+	"usb_lib.h"
+	"usb_istr.h"
+
+1407528135 w:\nucleo\j1\inc\usb\usb_istr.h
+	"usb_conf.h"
+
+1407500913 source:w:\nucleo\j1\src\stm_lib\misc.c
+	"misc.h"
+
+1407500913 source:w:\nucleo\j1\src\stm_lib\stm32l1xx_exti.c
+	"stm32l1xx_exti.h"
+
+1407500913 source:w:\nucleo\j1\src\stm_lib\stm32l1xx_pwr.c
+	"stm32l1xx_pwr.h"
+	"stm32l1xx_rcc.h"
+
+1407528129 source:w:\nucleo\j1\src\usb\usb_core.c
+	"usb_lib.h"
+
+1407528135 source:w:\nucleo\j1\src\usb\usb_desc.c
+	"usb_lib.h"
+	"usb_desc.h"
+
+1407528135 source:w:\nucleo\j1\src\usb\usb_endp.c
+	"usb_lib.h"
+	"usb_desc.h"
+	"usb_mem.h"
+	"hw_config.h"
+	"usb_istr.h"
+	"usb_pwr.h"
+
+1407528129 source:w:\nucleo\j1\src\usb\usb_init.c
+	"usb_lib.h"
+
+1407528129 source:w:\nucleo\j1\src\usb\usb_int.c
+	"usb_lib.h"
+
+1407528135 source:w:\nucleo\j1\src\usb\usb_istr.c
+	"usb_lib.h"
+	"usb_prop.h"
+	"usb_pwr.h"
+	"usb_istr.h"
+
+1407528129 source:w:\nucleo\j1\src\usb\usb_mem.c
+	"usb_lib.h"
+
+1407528135 source:w:\nucleo\j1\src\usb\usb_prop.c
+	"usb_lib.h"
+	"usb_conf.h"
+	"usb_prop.h"
+	"usb_desc.h"
+	"usb_pwr.h"
+	"hw_config.h"
+
+1407528135 source:w:\nucleo\j1\src\usb\usb_pwr.c
+	"usb_lib.h"
+	"usb_conf.h"
+	"usb_pwr.h"
+	"hw_config.h"
+
+1407528129 source:w:\nucleo\j1\src\usb\usb_regs.c
+	"usb_lib.h"
+
+1407528129 source:w:\nucleo\j1\src\usb\usb_sil.c
+	"usb_lib.h"
+
+1407500913 source:w:\nucleo\j1\src\stm_lib\stm32l1xx_usart.c
+	"stm32l1xx_usart.h"
+	"stm32l1xx_rcc.h"
+
+1407835877 source:w:\nucleo\j1\src\clock_config.c
+	"clock_config.h"
+	"stm32l1xx.h"
+
+1407745759 w:\nucleo\j1\inc\clock_config.h
+
+1407845420 w:\nucleo\j1\inc\misc\delay.h
+
+1407845669 source:w:\nucleo\j1\src\misc\delay.c
+	"system_stm32l1xx.h"
+
+1408440520 source:w:\nucleo\j_audio\src\hw_config.c
+	"hw_config.h"
+	"stm32_it.h"
+	"usb_lib.h"
+	"usb_desc.h"
+	"usb_pwr.h"
+	"usb_prop.h"
+
+1407925955 w:\nucleo\j_audio\inc\hw_config.h
+	"platform_config.h"
+	"stm32l1xx.h"
+
+1407929491 w:\nucleo\j_audio\inc\platform_config.h
+	"stm32l1xx.h"
+	"stm32l152_eval.h"
+	"stm32f10x.h"
+	"stm3210b_eval.h"
+	"i2s_codec.h"
+	"stm3210e_eval.h"
+
+1407837030 w:\nucleo\j_audio\inc\stm32l1xx.h
+	"core_cm3.h"
+	"system_stm32l1xx.h"
+	<stdint.h>
+	"stm32l1xx_conf.h"
+
+1407500913 w:\nucleo\j_audio\inc\cmsis\core_cm3.h
+	<stdint.h>
+	<core_cmInstr.h>
+	<core_cmFunc.h>
+
+1407500913 w:\nucleo\j_audio\inc\cmsis\core_cminstr.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1407500913 w:\nucleo\j_audio\inc\cmsis\core_cmfunc.h
+	<cmsis_iar.h>
+	<cmsis_ccs.h>
+
+1407845333 w:\nucleo\j_audio\inc\system_stm32l1xx.h
+
+1407528135 w:\nucleo\j_audio\inc\stm32l1xx_conf.h
+	"stm32l1xx_adc.h"
+	"stm32l1xx_crc.h"
+	"stm32l1xx_comp.h"
+	"stm32l1xx_dac.h"
+	"stm32l1xx_dbgmcu.h"
+	"stm32l1xx_dma.h"
+	"stm32l1xx_exti.h"
+	"stm32l1xx_flash.h"
+	"stm32l1xx_gpio.h"
+	"stm32l1xx_syscfg.h"
+	"stm32l1xx_i2c.h"
+	"stm32l1xx_iwdg.h"
+	"stm32l1xx_lcd.h"
+	"stm32l1xx_pwr.h"
+	"stm32l1xx_rcc.h"
+	"stm32l1xx_rtc.h"
+	"stm32l1xx_spi.h"
+	"stm32l1xx_tim.h"
+	"stm32l1xx_usart.h"
+	"stm32l1xx_wwdg.h"
+	"misc.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_adc.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_crc.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_comp.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_dac.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_dbgmcu.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_dma.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_exti.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_flash.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_gpio.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_syscfg.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_i2c.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_iwdg.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_lcd.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_pwr.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_rcc.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_rtc.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_spi.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_tim.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_usart.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_wwdg.h
+	"stm32l1xx.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\misc.h
+	"stm32l1xx.h"
+
+1407528129 w:\nucleo\j_audio\inc\i2s_codec.h
+	"stm32f10x.h"
+
+1407528129 w:\nucleo\j_audio\inc\stm32_it.h
+	"platform_config.h"
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_lib.h
+	"hw_config.h"
+	"usb_type.h"
+	"usb_regs.h"
+	"usb_def.h"
+	"usb_core.h"
+	"usb_init.h"
+	"usb_sil.h"
+	"usb_mem.h"
+	"usb_int.h"
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_type.h
+	"usb_conf.h"
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_conf.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_regs.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_def.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_core.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_init.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_sil.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_mem.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_int.h
+
+1408445858 w:\nucleo\j_audio\inc\usb\usb_desc.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_pwr.h
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_prop.h
+
+1407528129 source:w:\nucleo\j_audio\src\i2s_codec.c
+	"platform_config.h"
+	"i2s_codec.h"
+
+1407930414 source:w:\nucleo\j_audio\src\main.c
+	"hw_config.h"
+	"usb_lib.h"
+	"usb_desc.h"
+	"usb_prop.h"
+	"usb_pwr.h"
+
+1407845669 source:w:\nucleo\j_audio\src\misc\delay.c
+	"system_stm32l1xx.h"
+
+1407588405 source:w:\nucleo\j_audio\src\startup_stm32l1xx_hd.s
+
+1408272967 source:w:\nucleo\j_audio\src\stm32_it.c
+	"hw_config.h"
+	"stm32_it.h"
+	"usb_istr.h"
+	"usb_lib.h"
+	"usb_pwr.h"
+
+1407528129 w:\nucleo\j_audio\inc\usb\usb_istr.h
+	"usb_conf.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\misc.c
+	"misc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_adc.c
+	"stm32l1xx_adc.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_aes.c
+	"stm32l1xx_aes.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_aes.h
+	"stm32l1xx.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_aes_util.c
+	"stm32l1xx_aes.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_comp.c
+	"stm32l1xx_comp.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_crc.c
+	"stm32l1xx_crc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_dac.c
+	"stm32l1xx_dac.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_dbgmcu.c
+	"stm32l1xx_dbgmcu.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_dma.c
+	"stm32l1xx_dma.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_exti.c
+	"stm32l1xx_exti.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_fsmc.c
+	"stm32l1xx_fsmc.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_fsmc.h
+	"stm32l1xx.h"
+
+1407590268 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_gpio.c
+	<stm32l1xx_gpio.h>
+	<stm32l1xx_rcc.h>
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_i2c.c
+	"stm32l1xx_i2c.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_iwdg.c
+	"stm32l1xx_iwdg.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_lcd.c
+	"stm32l1xx_lcd.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_opamp.c
+	"stm32l1xx_opamp.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_opamp.h
+	"stm32l1xx.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_pwr.c
+	"stm32l1xx_pwr.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_rcc.c
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_rtc.c
+	"stm32l1xx_rtc.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_sdio.c
+	"stm32l1xx_sdio.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 w:\nucleo\j_audio\inc\stm_lib\stm32l1xx_sdio.h
+	"stm32l1xx.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_spi.c
+	"stm32l1xx_spi.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_syscfg.c
+	"stm32l1xx_syscfg.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_tim.c
+	"stm32l1xx_tim.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_usart.c
+	"stm32l1xx_usart.h"
+	"stm32l1xx_rcc.h"
+
+1407500913 source:w:\nucleo\j_audio\src\stm_lib\stm32l1xx_wwdg.c
+	"stm32l1xx_wwdg.h"
+	"stm32l1xx_rcc.h"
+
+1407841590 source:w:\nucleo\j_audio\src\system_stm32l1xx.c
+	"stm32l1xx.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_core.c
+	"usb_lib.h"
+
+1408443039 source:w:\nucleo\j_audio\src\usb\usb_desc.c
+	"usb_lib.h"
+	"usb_desc.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_endp.c
+	"usb_lib.h"
+	"usb_istr.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_init.c
+	"usb_lib.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_int.c
+	"usb_lib.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_istr.c
+	"usb_lib.h"
+	"usb_prop.h"
+	"usb_pwr.h"
+	"usb_istr.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_mem.c
+	"usb_lib.h"
+
+1407930473 source:w:\nucleo\j_audio\src\usb\usb_prop.c
+	"hw_config.h"
+	"usb_lib.h"
+	"usb_conf.h"
+	"usb_prop.h"
+	"usb_desc.h"
+	"usb_pwr.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_pwr.c
+	"usb_lib.h"
+	"usb_conf.h"
+	"usb_pwr.h"
+	"hw_config.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_regs.c
+	"usb_lib.h"
+
+1407528129 source:w:\nucleo\j_audio\src\usb\usb_sil.c
+	"usb_lib.h"
+
