@@ -271,15 +271,16 @@
 1407845669 source:w:\nucleo\j1\src\misc\delay.c
 	"system_stm32l1xx.h"
 
-1408440520 source:w:\nucleo\j_audio\src\hw_config.c
+1408529031 source:w:\nucleo\j_audio\src\hw_config.c
 	"hw_config.h"
 	"stm32_it.h"
 	"usb_lib.h"
 	"usb_desc.h"
 	"usb_pwr.h"
 	"usb_prop.h"
+	"light.h"
 
-1407925955 w:\nucleo\j_audio\inc\hw_config.h
+1408480309 w:\nucleo\j_audio\inc\hw_config.h
 	"platform_config.h"
 	"stm32l1xx.h"
 
@@ -401,7 +402,7 @@
 1407528129 w:\nucleo\j_audio\inc\i2s_codec.h
 	"stm32f10x.h"
 
-1407528129 w:\nucleo\j_audio\inc\stm32_it.h
+1408482881 w:\nucleo\j_audio\inc\stm32_it.h
 	"platform_config.h"
 
 1407528129 w:\nucleo\j_audio\inc\usb\usb_lib.h
@@ -434,17 +435,17 @@
 
 1407528129 w:\nucleo\j_audio\inc\usb\usb_int.h
 
-1408445858 w:\nucleo\j_audio\inc\usb\usb_desc.h
+1408465102 w:\nucleo\j_audio\inc\usb\usb_desc.h
 
 1407528129 w:\nucleo\j_audio\inc\usb\usb_pwr.h
 
-1407528129 w:\nucleo\j_audio\inc\usb\usb_prop.h
+1408464126 w:\nucleo\j_audio\inc\usb\usb_prop.h
 
 1407528129 source:w:\nucleo\j_audio\src\i2s_codec.c
 	"platform_config.h"
 	"i2s_codec.h"
 
-1407930414 source:w:\nucleo\j_audio\src\main.c
+1408481210 source:w:\nucleo\j_audio\src\main.c
 	"hw_config.h"
 	"usb_lib.h"
 	"usb_desc.h"
@@ -456,7 +457,7 @@
 
 1407588405 source:w:\nucleo\j_audio\src\startup_stm32l1xx_hd.s
 
-1408272967 source:w:\nucleo\j_audio\src\stm32_it.c
+1408482834 source:w:\nucleo\j_audio\src\stm32_it.c
 	"hw_config.h"
 	"stm32_it.h"
 	"usb_istr.h"
@@ -575,7 +576,7 @@
 1407528129 source:w:\nucleo\j_audio\src\usb\usb_core.c
 	"usb_lib.h"
 
-1408443039 source:w:\nucleo\j_audio\src\usb\usb_desc.c
+1408479913 source:w:\nucleo\j_audio\src\usb\usb_desc.c
 	"usb_lib.h"
 	"usb_desc.h"
 
@@ -598,7 +599,7 @@
 1407528129 source:w:\nucleo\j_audio\src\usb\usb_mem.c
 	"usb_lib.h"
 
-1407930473 source:w:\nucleo\j_audio\src\usb\usb_prop.c
+1408483509 source:w:\nucleo\j_audio\src\usb\usb_prop.c
 	"hw_config.h"
 	"usb_lib.h"
 	"usb_conf.h"
@@ -617,4 +618,10 @@
 
 1407528129 source:w:\nucleo\j_audio\src\usb\usb_sil.c
 	"usb_lib.h"
+
+1408528336 w:\nucleo\j_audio\inc\misc\light.h
+
+1408529140 source:w:\nucleo\j_audio\src\misc\light.c
+	"stm32l1xx.h"
+	"stm32l1xx_gpio.h"
 

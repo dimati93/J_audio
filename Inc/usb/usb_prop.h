@@ -16,8 +16,8 @@
   *
   *        http://www.st.com/software_license_agreement_liberty_v2
   *
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   * See the License for the specific language governing permissions and
   * limitations under the License.
@@ -35,30 +35,30 @@
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions ------------------------------------------------------- */
-void Speaker_init(void);
-void Speaker_Reset(void);
-void Speaker_SetConfiguration(void);
-void Speaker_SetDeviceAddress (void);
-void Speaker_Status_In (void);
-void Speaker_Status_Out (void);
-RESULT Speaker_Data_Setup(uint8_t);
-RESULT Speaker_NoData_Setup(uint8_t);
-RESULT Speaker_Get_Interface_Setting(uint8_t Interface, uint8_t AlternateSetting);
-uint8_t *Speaker_GetDeviceDescriptor(uint16_t );
-uint8_t *Speaker_GetConfigDescriptor(uint16_t);
-uint8_t *Speaker_GetStringDescriptor(uint16_t);
+void Mic_init(void);
+void Mic_Reset(void);
+void Mic_SetConfiguration(void);
+void Mic_SetDeviceAddress (void);
+void Mic_Status_In (void);
+void Mic_Status_Out (void);
+RESULT Mic_Data_Setup(uint8_t);
+RESULT Mic_NoData_Setup(uint8_t);
+RESULT Mic_Get_Interface_Setting(uint8_t Interface, uint8_t AlternateSetting);
+uint8_t *Mic_GetDeviceDescriptor(uint16_t );
+uint8_t *Mic_GetConfigDescriptor(uint16_t);
+uint8_t *Mic_GetStringDescriptor(uint16_t);
 uint8_t *Mute_Command(uint16_t Length);
 
 /* Exported define -----------------------------------------------------------*/
-#define Speaker_GetConfiguration          NOP_Process
-//#define Speaker_SetConfiguration          NOP_Process
-#define Speaker_GetInterface              NOP_Process
-#define Speaker_SetInterface              NOP_Process
-#define Speaker_GetStatus                 NOP_Process
-#define Speaker_ClearFeature              NOP_Process
-#define Speaker_SetEndPointFeature        NOP_Process
-#define Speaker_SetDeviceFeature          NOP_Process
-//#define Speaker_SetDeviceAddress          NOP_Process
+#define Mic_GetConfiguration          NOP_Process
+//#define Mic_SetConfiguration          NOP_Process
+#define Mic_GetInterface              NOP_Process
+#define Mic_SetInterface              NOP_Process
+#define Mic_GetStatus                 NOP_Process
+#define Mic_ClearFeature              NOP_Process
+#define Mic_SetEndPointFeature        NOP_Process
+#define Mic_SetDeviceFeature          NOP_Process
+//#define Mic_SetDeviceAddress          NOP_Process
 #define GET_CUR                           0x81
 #define SET_CUR                           0x01
 

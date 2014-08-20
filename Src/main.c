@@ -58,7 +58,6 @@ int main(void)
   Set_USBClock();
   USB_Config();
   USB_Init();
-  Speaker_Config();
   while (1)
   {}
 }

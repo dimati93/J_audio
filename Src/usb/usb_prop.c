@@ -4,7 +4,7 @@
   * @author  MCD Application Team
   * @version V4.0.0
   * @date    21-January-2013
-  * @brief   All processing related to Audio Speaker Demo
+  * @brief   All processing related to Audio Mic Demo
   ******************************************************************************
   * @attention
   *
@@ -48,51 +48,51 @@ DEVICE Device_Table =
 
 DEVICE_PROP Device_Property =
   {
-    Speaker_init,
-    Speaker_Reset,
-    Speaker_Status_In,
-    Speaker_Status_Out,
-    Speaker_Data_Setup,
-    Speaker_NoData_Setup,
-    Speaker_Get_Interface_Setting,
-    Speaker_GetDeviceDescriptor,
-    Speaker_GetConfigDescriptor,
-    Speaker_GetStringDescriptor,
+    Mic_init,
+    Mic_Reset,
+    Mic_Status_In,
+    Mic_Status_Out,
+    Mic_Data_Setup,
+    Mic_NoData_Setup,
+    Mic_Get_Interface_Setting,
+    Mic_GetDeviceDescriptor,
+    Mic_GetConfigDescriptor,
+    Mic_GetStringDescriptor,
     0,
     0x40 /*MAX PACKET SIZE*/
   };
 
 USER_STANDARD_REQUESTS User_Standard_Requests =
   {
-    Speaker_GetConfiguration,
-    Speaker_SetConfiguration,
-    Speaker_GetInterface,
-    Speaker_SetInterface,
-    Speaker_GetStatus,
-    Speaker_ClearFeature,
-    Speaker_SetEndPointFeature,
-    Speaker_SetDeviceFeature,
-    Speaker_SetDeviceAddress
+    Mic_GetConfiguration,
+    Mic_SetConfiguration,
+    Mic_GetInterface,
+    Mic_SetInterface,
+    Mic_GetStatus,
+    Mic_ClearFeature,
+    Mic_SetEndPointFeature,
+    Mic_SetDeviceFeature,
+    Mic_SetDeviceAddress
   };
 
 ONE_DESCRIPTOR Device_Descriptor =
   {
-    (uint8_t*)Speaker_DeviceDescriptor,
-    SPEAKER_SIZ_DEVICE_DESC
+    (uint8_t*)Mic_DeviceDescriptor,
+    MIC_SIZ_DEVICE_DESC
   };
 
 ONE_DESCRIPTOR Config_Descriptor =
   {
-    (uint8_t*)Speaker_ConfigDescriptor,
-    SPEAKER_SIZ_CONFIG_DESC
+    (uint8_t*)Mic_ConfigDescriptor,
+    MIC_SIZ_CONFIG_DESC
   };
 
 ONE_DESCRIPTOR String_Descriptor[4] =
   {
-    {(uint8_t*)Speaker_StringLangID, SPEAKER_SIZ_STRING_LANGID},
-    {(uint8_t*)Speaker_StringVendor, SPEAKER_SIZ_STRING_VENDOR},
-    {(uint8_t*)Speaker_StringProduct, SPEAKER_SIZ_STRING_PRODUCT},
-    {(uint8_t*)Speaker_StringSerial, SPEAKER_SIZ_STRING_SERIAL},
+    {(uint8_t*)Mic_StringLangID,    MIC_SIZ_STRING_LANGID},
+    {(uint8_t*)Mic_StringVendor,    MIC_SIZ_STRING_VENDOR},
+    {(uint8_t*)Mic_StringProduct,   MIC_SIZ_STRING_PRODUCT},
+    {(uint8_t*)Mic_StringSerial,    MIC_SIZ_STRING_SERIAL},
   };
 
 /* Extern variables ----------------------------------------------------------*/
@@ -105,13 +105,13 @@ extern uint16_t Out_Data_Offset;
 /* Private functions ---------------------------------------------------------*/
 
 /*******************************************************************************
-* Function Name  : Speaker_init.
-* Description    : Speaker init routine.
+* Function Name  : Mic_init.
+* Description    : Mic init routine.
 * Input          : None.
 * Output         : None.
 * Return         : None.
 *******************************************************************************/
-void Speaker_init()
+void Mic_init()
 {
   /* Update the serial number string descriptor with the data from the unique
   ID*/
@@ -130,19 +130,19 @@ void Speaker_init()
 }
 
 /*******************************************************************************
-* Function Name  : Speaker_Reset.
-* Description    : Speaker reset routine.
+* Function Name  : Mic_Reset.
+* Description    : Mic reset routine.
 * Input          : None.
 * Output         : None.
 * Return         : None.
 *******************************************************************************/
-void Speaker_Reset()
+void Mic_Reset()
 {
-  /* Set Speaker device as not configured state */
+  /* Set Mic device as not configured state */
   pInformation->Current_Configuration = 0;
 
   /* Current Feature initialization */
-  pInformation->Current_Feature = Speaker_ConfigDescriptor[7];
+  pInformation->Current_Feature = Mic_ConfigDescriptor[7];
 
   SetBTABLE(BTABLE_ADDRESS);
 
@@ -158,12 +158,12 @@ void Speaker_Reset()
   /* Initialize Endpoint 1 */
   SetEPType(ENDP1, EP_ISOCHRONOUS);
   SetEPDblBuffAddr(ENDP1, ENDP1_BUF0Addr, ENDP1_BUF1Addr);
-  SetEPDblBuffCount(ENDP1, EP_DBUF_OUT, 0x40);
+  SetEPDblBuffCount(ENDP1, EP_DBUF_IN, 0x10);
   ClearDTOG_RX(ENDP1);
   ClearDTOG_TX(ENDP1);
   ToggleDTOG_TX(ENDP1);
-  SetEPRxStatus(ENDP1, EP_RX_VALID);
-  SetEPTxStatus(ENDP1, EP_TX_DIS);
+  SetEPRxStatus(ENDP1, EP_RX_DIS);
+  SetEPTxStatus(ENDP1, EP_TX_VALID);
 
   SetEPRxValid(ENDP0);
   /* Set this device to response on default address */
@@ -175,13 +175,13 @@ void Speaker_Reset()
   Out_Data_Offset = 0;
 }
 /*******************************************************************************
-* Function Name  : Speaker_SetConfiguration.
+* Function Name  : Mic_SetConfiguration.
 * Description    : Update the device state to configured.
 * Input          : None.
 * Output         : None.
 * Return         : None.
 *******************************************************************************/
-void Speaker_SetConfiguration(void)
+void Mic_SetConfiguration(void)
 {
   DEVICE_INFO *pInfo = &Device_Info;
 
@@ -192,44 +192,44 @@ void Speaker_SetConfiguration(void)
   }
 }
 /*******************************************************************************
-* Function Name  : Speaker_SetConfiguration.
+* Function Name  : Mic_SetConfiguration.
 * Description    : Update the device state to addressed.
 * Input          : None.
 * Output         : None.
 * Return         : None.
 *******************************************************************************/
-void Speaker_SetDeviceAddress (void)
+void Mic_SetDeviceAddress (void)
 {
   bDeviceState = ADDRESSED;
 }
 /*******************************************************************************
-* Function Name  : Speaker_Status_In.
-* Description    : Speaker Status In routine.
+* Function Name  : Mic_Status_In.
+* Description    : Mic Status In routine.
 * Input          : None.
 * Output         : None.
 * Return         : None.
 *******************************************************************************/
-void Speaker_Status_In(void)
+void Mic_Status_In(void)
 {}
 
 /*******************************************************************************
-* Function Name  : Speaker_Status_Out.
-* Description    : Speaker Status Out routine.
+* Function Name  : Mic_Status_Out.
+* Description    : Mic Status Out routine.
 * Input          : None.
 * Output         : None.
 * Return         : None.
 *******************************************************************************/
-void Speaker_Status_Out (void)
+void Mic_Status_Out (void)
 {}
 
 /*******************************************************************************
-* Function Name  : Speaker_Data_Setup
+* Function Name  : Mic_Data_Setup
 * Description    : Handle the data class specific requests.
 * Input          : None.
 * Output         : None.
 * Return         : USB_UNSUPPORT or USB_SUCCESS.
 *******************************************************************************/
-RESULT Speaker_Data_Setup(uint8_t RequestNo)
+RESULT Mic_Data_Setup(uint8_t RequestNo)
 {
   uint8_t *(*CopyRoutine)(uint16_t);
   CopyRoutine = NULL;
@@ -251,49 +251,49 @@ RESULT Speaker_Data_Setup(uint8_t RequestNo)
 }
 
 /*******************************************************************************
-* Function Name  : Speaker_NoData_Setup
+* Function Name  : Mic_NoData_Setup
 * Description    : Handle the no data class specific requests.
 * Input          : None.
 * Output         : None.
 * Return         : USB_UNSUPPORT or USB_SUCCESS.
 *******************************************************************************/
-RESULT Speaker_NoData_Setup(uint8_t RequestNo)
+RESULT Mic_NoData_Setup(uint8_t RequestNo)
 {
   return USB_UNSUPPORT;
 }
 
 /*******************************************************************************
-* Function Name  : Speaker_GetDeviceDescriptor.
+* Function Name  : Mic_GetDeviceDescriptor.
 * Description    : Get the device descriptor.
 * Input          : Length : uint16_t.
 * Output         : None.
 * Return         : The address of the device descriptor.
 *******************************************************************************/
-uint8_t *Speaker_GetDeviceDescriptor(uint16_t Length)
+uint8_t *Mic_GetDeviceDescriptor(uint16_t Length)
 {
   return Standard_GetDescriptorData(Length, &Device_Descriptor);
 }
 
 /*******************************************************************************
-* Function Name  : Speaker_GetConfigDescriptor.
+* Function Name  : Mic_GetConfigDescriptor.
 * Description    : Get the configuration descriptor.
 * Input          : Length : uint16_t.
 * Output         : None.
 * Return         : The address of the configuration descriptor.
 *******************************************************************************/
-uint8_t *Speaker_GetConfigDescriptor(uint16_t Length)
+uint8_t *Mic_GetConfigDescriptor(uint16_t Length)
 {
   return Standard_GetDescriptorData(Length, &Config_Descriptor);
 }
 
 /*******************************************************************************
-* Function Name  : Speaker_GetStringDescriptor.
+* Function Name  : Mic_GetStringDescriptor.
 * Description    : Get the string descriptors according to the needed index.
 * Input          : Length : uint16_t.
 * Output         : None.
 * Return         : The address of the string descriptors.
 *******************************************************************************/
-uint8_t *Speaker_GetStringDescriptor(uint16_t Length)
+uint8_t *Mic_GetStringDescriptor(uint16_t Length)
 {
   uint8_t wValue0 = pInformation->USBwValue0;
 
@@ -308,7 +308,7 @@ uint8_t *Speaker_GetStringDescriptor(uint16_t Length)
 }
 
 /*******************************************************************************
-* Function Name  : Speaker_Get_Interface_Setting.
+* Function Name  : Mic_Get_Interface_Setting.
 * Description    : test the interface and the alternate setting according to the
 *                  supported one.
 * Input1         : uint8_t: Interface : interface number.
@@ -316,7 +316,7 @@ uint8_t *Speaker_GetStringDescriptor(uint16_t Length)
 * Output         : None.
 * Return         : The address of the string descriptors.
 *******************************************************************************/
-RESULT Speaker_Get_Interface_Setting(uint8_t Interface, uint8_t AlternateSetting)
+RESULT Mic_Get_Interface_Setting(uint8_t Interface, uint8_t AlternateSetting)
 {
   if (AlternateSetting > 1)
   {

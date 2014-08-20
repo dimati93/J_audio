@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <EmBlocks_project_file>
-	<EmBlocksVersion release="2.10" revision="1" />
+	<EmBlocksVersion release="2.20" revision="1" />
 	<FileVersion major="1" minor="0" />
 	<Project>
 		<Option title="j_audio" />
@@ -79,34 +79,18 @@
 		<Unit filename="Inc\hw_config.h" />
 		<Unit filename="Inc\i2s_codec.h" />
 		<Unit filename="Inc\misc\delay.h" />
+		<Unit filename="Inc\misc\light.h" />
 		<Unit filename="Inc\platform_config.h" />
 		<Unit filename="Inc\stm32_it.h" />
 		<Unit filename="Inc\stm32l1xx.h" />
 		<Unit filename="Inc\stm32l1xx_conf.h" />
 		<Unit filename="Inc\stm_lib\misc.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_adc.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_aes.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_comp.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_crc.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_dac.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_dbgmcu.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_dma.h" />
 		<Unit filename="Inc\stm_lib\stm32l1xx_exti.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_fsmc.h" />
 		<Unit filename="Inc\stm_lib\stm32l1xx_gpio.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_i2c.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_iwdg.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_lcd.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_opamp.h" />
 		<Unit filename="Inc\stm_lib\stm32l1xx_pwr.h" />
 		<Unit filename="Inc\stm_lib\stm32l1xx_rcc.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_rtc.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_sdio.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_spi.h" />
 		<Unit filename="Inc\stm_lib\stm32l1xx_syscfg.h" />
 		<Unit filename="Inc\stm_lib\stm32l1xx_tim.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_usart.h" />
-		<Unit filename="Inc\stm_lib\stm32l1xx_wwdg.h" />
 		<Unit filename="Inc\system_stm32l1xx.h" />
 		<Unit filename="Inc\usb\usb_conf.h" />
 		<Unit filename="Inc\usb\usb_core.h" />
@@ -131,6 +115,9 @@
 		<Unit filename="Src\misc\delay.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Src\misc\light.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="Src\startup_stm32l1xx_hd.S">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -140,49 +127,10 @@
 		<Unit filename="Src\stm_lib\misc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_adc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_aes.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_aes_util.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_comp.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_crc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_dac.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_dbgmcu.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_dma.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="Src\stm_lib\stm32l1xx_exti.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_fsmc.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="Src\stm_lib\stm32l1xx_gpio.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_i2c.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_iwdg.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_lcd.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_opamp.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Src\stm_lib\stm32l1xx_pwr.c">
@@ -191,25 +139,10 @@
 		<Unit filename="Src\stm_lib\stm32l1xx_rcc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_rtc.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_sdio.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_spi.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="Src\stm_lib\stm32l1xx_syscfg.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Src\stm_lib\stm32l1xx_tim.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_usart.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="Src\stm_lib\stm32l1xx_wwdg.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Src\system_stm32l1xx.c">
@@ -252,11 +185,8 @@
 		<Extensions>
 			<code_completion />
 			<debugger>
-				<target_debugging_settings target="Debug" active_interface="ST-link">
-					<debug_interface interface_id="CooLinkEx" ip_address="" ip_port="" path="" executable="" description="" dont_start_server="false" backoff_time="" options="0" active_family="" />
-					<debug_interface interface_id="Generic" ip_address="" ip_port="" path="" executable="" description="" dont_start_server="false" backoff_time="" options="0" active_family="" />
-					<debug_interface interface_id="J-link" ip_address="" ip_port="" path="" executable="" description="" dont_start_server="false" backoff_time="" options="0" active_family="" />
-					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="STM32L1xx.svd" dont_start_server="false" backoff_time="1000" options="2" active_family="STMicroelectronics">
+				<target_debugging_settings target="Release" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
 							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
@@ -267,8 +197,11 @@
 						</family_options>
 					</debug_interface>
 				</target_debugging_settings>
-				<target_debugging_settings target="Release" active_interface="ST-link">
-					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="" dont_start_server="false" backoff_time="1000" options="0" active_family="STMicroelectronics">
+				<target_debugging_settings target="Debug" active_interface="ST-link">
+					<debug_interface interface_id="CooLinkEx" ip_address="" ip_port="" path="" executable="" description="" dont_start_server="false" backoff_time="" options="0" reg_filter="0" active_family="" />
+					<debug_interface interface_id="Generic" ip_address="" ip_port="" path="" executable="" description="" dont_start_server="false" backoff_time="" options="0" reg_filter="0" active_family="" />
+					<debug_interface interface_id="J-link" ip_address="" ip_port="" path="" executable="" description="" dont_start_server="false" backoff_time="" options="0" reg_filter="0" active_family="" />
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description="STM32L1xx.svd" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="STMicroelectronics">
 						<family_options family_id="STMicroelectronics">
 							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
 							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />

@@ -172,49 +172,6 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /*******************************************************************************
-* Function Name  : TIM2_IRQHandler
-* Description    : This function handles TIM2 global interrupt request.
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
-void TIM2_IRQHandler(void)
-{
-  if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
-  {
-    /* Clear TIM2 update interrupt */
-    TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-
-    if ((Out_Data_Offset < In_Data_Offset) && ((uint8_t)(MUTE_DATA) == 0))
-    {
-      TIM_SetCompare3(TIM4, Stream_Buff[Out_Data_Offset]);
-      Out_Data_Offset++;
-    }
-  }
-}
-
-/**
-  * @brief  This function handles TIM6 global interrupt request.
-  * @param  None
-  * @retval None
-  */
-void TIM6_IRQHandler(void)
-{
-  if (TIM_GetITStatus(TIM6, TIM_IT_Update) != RESET)
-  {
-    /* Clear TIM6 update interrupt */
-    TIM_ClearITPendingBit(TIM6, TIM_IT_Update);
-
-    if ((Out_Data_Offset < In_Data_Offset) && ((uint8_t)(MUTE_DATA) == 0))
-    {
-      /* Set DAC Channel1 DHR register */
-      DAC_SetChannel1Data(DAC_Align_8b_R, Stream_Buff[Out_Data_Offset]);
-      Out_Data_Offset++;
-    }
-  }
-}
-
-/*******************************************************************************
 * Function Name  : USB_LP_IRQHandler
 * Description    : This function handles USB Low Priority interrupt requests.
 * Input          : None

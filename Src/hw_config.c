@@ -34,6 +34,8 @@
 #include "usb_pwr.h"
 #include "usb_prop.h"
 
+#include "light.h"
+
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 #define TIM2ARRValue    3273 /* 22KHz = 72MHz / 3273 */
@@ -65,9 +67,12 @@ void Set_System(void)
   /* Enable the SYSCFG module clock */
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
 
-  USB_Cable_Config(DISABLE);
+  IntitializeLight();
 
-  USB_Cable_Config(ENABLE);
+  if ((RCC->CR & RCC_CR_HSERDY) && (RCC->CR & RCC_CR_PLLRDY))
+  {
+      SetLight();
+  }
 
   /* Configure the EXTI line 18 connected internally to the USB IP */
   EXTI_ClearITPendingBit(EXTI_Line18);
@@ -153,9 +158,6 @@ void USB_Config(void)
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
   NVIC_Init(&NVIC_InitStructure);
-
-  /* Audio Components Interrupt configuration */
-  Audio_Config();
 }
 /*******************************************************************************
 * Function Name  : USB_Interrupts_Config
@@ -163,17 +165,8 @@ void USB_Config(void)
 * Input          : None.
 * Return         : None.
 *******************************************************************************/
-void Audio_Config(void)
-{
-  NVIC_InitTypeDef NVIC_InitStructure;
 
-  /* Enable the TIM2 Interrupt */
-  NVIC_InitStructure.NVIC_IRQChannel = TIM6_IRQn;
-  NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
-  NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-  NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-  NVIC_Init(&NVIC_InitStructure);
-}
+
 /*******************************************************************************
 * Function Name  : USB_Cable_Config
 * Description    : Software Connection/Disconnection of USB Cable
@@ -195,65 +188,6 @@ void USB_Cable_Config (FunctionalState NewState)
 }
 
 /*******************************************************************************
-* Function Name  : Speaker_Timer_Config
-* Description    : Configure and enable the timer
-* Input          : None.
-* Return         : None.
-*******************************************************************************/
-void Speaker_Config(void)
-{
-  DAC_InitTypeDef     DAC_InitStructure;
-  GPIO_InitTypeDef    GPIO_InitStructure;
-  uint16_t TIM6ARRValue = 4000;
-
-  /* TIM6 and DAC clocks enable */
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM6 | RCC_APB1Periph_DAC, ENABLE);
-
-  /* Enable GPIOA clock */
-  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
-
-  /* Configure DAC Channel1 and Channel2 as output */
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_4 | GPIO_Pin_5;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_40MHz;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL ;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AIN;
-  GPIO_Init(GPIOA, &GPIO_InitStructure);
-
-  /* TIM6 Configuration */
-  TIM_DeInit(TIM6);
-
-  TIM6ARRValue = (uint32_t)(SystemCoreClock/22000); /* Audio Sample Rate = 22KHz */
-
-  /* Set the timer auto reload value dependent on the audio frequency */
-  TIM_SetAutoreload(TIM6, TIM6ARRValue); /* 22.KHz = 32MHz / 1454 */
-
-  /* TIM6 TRGO selection */
-  TIM_SelectOutputTrigger(TIM6, TIM_TRGOSource_Update);
-
-  /* Enable TIM6 update interrupt */
-  TIM_ITConfig(TIM6, TIM_IT_Update, ENABLE);
-
-  /* DAC deinitialize */
-  DAC_DeInit();
-  DAC_StructInit(&DAC_InitStructure);
-
-  /* Fill DAC InitStructure */
-  DAC_InitStructure.DAC_Trigger = DAC_Trigger_T6_TRGO;
-  DAC_InitStructure.DAC_WaveGeneration = DAC_WaveGeneration_None;
-  DAC_InitStructure.DAC_OutputBuffer = DAC_OutputBuffer_Disable;
-
-/* DAC Channel1: 8bit right---------------------------------------------------*/
-  /* DAC Channel1 Init */
-  DAC_Init(DAC_Channel_1, &DAC_InitStructure);
-
-  /* Enable DAC Channel1 */
-  DAC_Cmd(DAC_Channel_1, ENABLE);
-
-  /* Start TIM6 */
-  TIM_Cmd(TIM6, ENABLE);
-}
-
-/*******************************************************************************
 * Function Name  : Get_SerialNum.
 * Description    : Create the serial number string descriptor.
 * Input          : None.
@@ -272,8 +206,8 @@ void Get_SerialNum(void)
 
   if (Device_Serial0 != 0)
   {
-    IntToUnicode (Device_Serial0, &Speaker_StringSerial[2] , 8);
-    IntToUnicode (Device_Serial1, &Speaker_StringSerial[18], 4);
+    IntToUnicode (Device_Serial0, &Mic_StringSerial[2] , 8);
+    IntToUnicode (Device_Serial1, &Mic_StringSerial[18], 4);
   }
 }
 

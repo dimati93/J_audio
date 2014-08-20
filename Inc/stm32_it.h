@@ -16,8 +16,8 @@
   *
   *        http://www.st.com/software_license_agreement_liberty_v2
   *
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
+  * Unless required by applicable law or agreed to in writing, software
+  * distributed under the License is distributed on an "AS IS" BASIS,
   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   * See the License for the specific language governing permissions and
   * limitations under the License.
@@ -51,13 +51,6 @@ void USB_HP_CAN1_TX_IRQHandler(void);
 void USB_LP_CAN1_RX0_IRQHandler(void);
 void USBWakeUp_IRQHandler(void);
 void USB_FS_WKUP_IRQHandler(void);
-#ifdef USE_STM3210B_EVAL
-void TIM2_IRQHandler(void);
-#endif /* USE_STM3210B_EVAL */
-#if defined (USE_STM3210E_EVAL)
-void SPI2_IRQHandler(void);
-#endif /* USE_STM3210E_EVAL */
-					 
-#endif /* __STM32_IT_H */
 
+#endif
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
